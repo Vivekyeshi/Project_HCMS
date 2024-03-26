@@ -6,42 +6,42 @@ import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.vivek.entities.Employees;
+import com.vivek.entities.Departments;
 
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 
 @Repository
 @Transactional
- public class EmployeesDAOImpl implements EmployeesDAO {
+public class DepartmentsDAOImpl implements DepartmentDAO {
 
 	@Autowired
 	private EntityManager entityManager;
 
 	@Override
-	public List<Employees> getAllEmployees() {
-		return entityManager.unwrap(Session.class).createQuery("from Employees", Employees.class).getResultList();
+	public List<Departments> getAllDepartments() {
+		return entityManager.unwrap(Session.class).createQuery("from Departments", Departments.class).getResultList();
 	}
 
 	@Override
-	public void addEmployee(Employees employee) {
-		entityManager.unwrap(Session.class).persist(employee);
+	public void addDepartment(Departments department) {
+		entityManager.unwrap(Session.class).persist(department);
 	}
 
 	@Override
-	public void updateEmployee(Employees employee) {
+	public void updateDepartment(Departments department) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void deleteEmployees(int employeeId) {
+	public void deleteDepartments(int departmentId) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public Employees getEmployeesById(int employeeId) {
+	public Departments getDepartmentsById(int departmentId) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -6,6 +6,14 @@ import com.vivek.entities.Employees;
 
 public interface EmployeesService {
 	
-	public  abstract List<Employees> getAllEmployees();
+   List<Employees> getAllEmployees();
+	
+	void addEmployee(Employees employee);
+	
+	void updateEmployee(Employees employee);
+	
+	void deleteEmployees(int employeeId);
+	
+	Employees getEmployeesById(int employeeId);
 
 }
