@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.vivek.entities.Employees;
@@ -22,13 +23,14 @@ public class EmployeesController {
 	public ResponseEntity<List<Employees>> getAll() {
 
 		return new ResponseEntity<List<Employees>>(employeesService.getAllEmployees(), HttpStatus.OK);
-
-	}  
+	}
 	
 	@PostMapping("/addEmployee")
-	public ResponseEntity<Employees> addEmployee(Employees employee) {
-		return null;
-		
+	public ResponseEntity<Employees> addEmployee(@RequestBody Employees employee) {
+		if (employee == null) {
+			return new ResponseEntity<Employees>(HttpStatus.BAD_REQUEST);
+		}
+		employeesService.addEmployee(employee);
+		return new ResponseEntity<Employees>(HttpStatus.CREATED);
 	}
-
 }

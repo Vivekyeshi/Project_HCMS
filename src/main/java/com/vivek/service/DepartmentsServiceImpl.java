@@ -14,13 +14,6 @@ public class DepartmentsServiceImpl implements DepartmentsService {
 	@Autowired
 	DepartmentsDAOImpl departmentsDAO;
 
-	public DepartmentsDAOImpl getDepartmentsDAO() {
-		return departmentsDAO;
-	}
-
-	public void setDepartmentsDAO(DepartmentsDAOImpl departmentsDAO) {
-		this.departmentsDAO = departmentsDAO;
-	}
 
 	@Override
 	public List<Departments> getAllDepartments() {
