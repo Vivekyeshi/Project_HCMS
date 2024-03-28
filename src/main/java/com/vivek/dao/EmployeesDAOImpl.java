@@ -30,23 +30,19 @@ import jakarta.transaction.Transactional;
 
 	@Override
 	public  void updateEmployee(Employees employee) {
-		if(entityManager.unwrap(Session.class).contains(employee)) {
 			entityManager.unwrap(Session.class).merge(employee);
-		}else {
-			System.out.println("Object not present in the database...");
-		}
 	}
 
 	@Override
-	public void deleteEmployees(int employeeId) {
-		// TODO Auto-generated method stub
+	public void deleteEmployees(Employees employee) {
 
+		entityManager.unwrap(Session.class).remove(employee);
+		
 	}
 
 	@Override
 	public Employees getEmployeesById(int employeeId) {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(Employees.class, employeeId);
 	}
 
 

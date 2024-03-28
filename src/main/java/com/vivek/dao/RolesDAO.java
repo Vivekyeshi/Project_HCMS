@@ -10,10 +10,10 @@ public interface RolesDAO {
 
 	void addRole(Roles role);
 
-	void updateRole(Roles Role);
+	void updateRole(Roles role);
 
-	void deleteRoles(int RoleId);
+	void deleteRoles(Roles role);
 
-	Roles getRolesById(int RoleId);
+	Roles getRolesById(int roleId);
 
 }

@@ -2,11 +2,16 @@ package com.vivek.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.vivek.dao.ApplicationStatusDAOImpl;
 import com.vivek.entities.ApplicationStatus;
 
+@Service
 public class ApplicationStatusServiceImpl implements ApplicationStatusService {
 
+	@Autowired
 	private ApplicationStatusDAOImpl applicationStatusDAO;
 
 	@Override
@@ -22,20 +27,20 @@ public class ApplicationStatusServiceImpl implements ApplicationStatusService {
 
 	@Override
 	public void updateApplicationStatus(ApplicationStatus applicationStatus) {
-		// TODO Auto-generated method stub
-
+		applicationStatusDAO.updateApplicationStatus(applicationStatus);
+		
 	}
 
 	@Override
-	public void deleteApplicationStatus(int applicationId) {
-		// TODO Auto-generated method stub
-
+	public void deleteApplicationStatus(ApplicationStatus applicationStatus) {
+		applicationStatusDAO. deleteApplicationStatus(applicationStatus);
+		
 	}
 
 	@Override
 	public ApplicationStatus getApplicationStatusById(int applicationId) {
-		// TODO Auto-generated method stub
-		return null;
+		return applicationStatusDAO.getApplicationStatusById(applicationId);
 	}
+
 
 }

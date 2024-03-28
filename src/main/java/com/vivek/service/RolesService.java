@@ -12,7 +12,7 @@ public interface RolesService {
 	
 		void updateRole(Roles Role);
 	
-		void deleteRoles(int RoleId);
+		void deleteRoles(Roles Role);
 	
 		Roles getRolesById(int RoleId);
 

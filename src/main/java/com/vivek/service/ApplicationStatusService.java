@@ -12,7 +12,7 @@ public interface ApplicationStatusService {
 	
 	void updateApplicationStatus(ApplicationStatus applicationStatus);
 
-	void deleteApplicationStatus(int applicationId);
+	void deleteApplicationStatus(ApplicationStatus applicationStatus);
 	
 	ApplicationStatus getApplicationStatusById(int applicationId);
 }

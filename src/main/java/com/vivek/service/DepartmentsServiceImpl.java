@@ -30,20 +30,19 @@ public class DepartmentsServiceImpl implements DepartmentsService {
 
 	@Override
 	public void updateDepartment(Departments department) {
-		// TODO Auto-generated method stub
+		departmentsDAO. updateDepartment(department);
 
 	}
 
 	@Override
-	public void deleteDepartments(int departmentId) {
-		// TODO Auto-generated method stub
+	public void deleteDepartments(Departments department) {
+		departmentsDAO. deleteDepartments(department);
 
 	}
 
 	@Override
 	public Departments getDepartmentsById(int departmentId) {
-		// TODO Auto-generated method stub
-		return null;
+		return departmentsDAO.getDepartmentsById(departmentId);
 	}
 
 }

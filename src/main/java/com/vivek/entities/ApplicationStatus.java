@@ -36,6 +36,67 @@ public class ApplicationStatus {
 
 	@Column(name = "ApplicationNotes")
 	private String applicationNotes;
+
+	public ApplicationStatus(int applicationId, CandidateProfiles candidate, Vacancies vacancies, String status,
+			LocalDate applicationDate, String applicationNotes) {
+		super();
+		this.applicationId = applicationId;
+		this.candidate = candidate;
+		this.vacancies = vacancies;
+		this.status = status;
+		this.applicationDate = applicationDate;
+		this.applicationNotes = applicationNotes;
+	}
+
+	public int getApplicationId() {
+		return applicationId;
+	}
+
+	public void setApplicationId(int applicationId) {
+		this.applicationId = applicationId;
+	}
+
+	public CandidateProfiles getCandidate() {
+		return candidate;
+	}
+
+	public void setCandidate(CandidateProfiles candidate) {
+		this.candidate = candidate;
+	}
+
+	public Vacancies getVacancies() {
+		return vacancies;
+	}
+
+	public void setVacancies(Vacancies vacancies) {
+		this.vacancies = vacancies;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public LocalDate getApplicationDate() {
+		return applicationDate;
+	}
+
+	public void setApplicationDate(LocalDate applicationDate) {
+		this.applicationDate = applicationDate;
+	}
+
+	public String getApplicationNotes() {
+		return applicationNotes;
+	}
+
+	public void setApplicationNotes(String applicationNotes) {
+		this.applicationNotes = applicationNotes;
+	}
+	
+	
 	
 	
 

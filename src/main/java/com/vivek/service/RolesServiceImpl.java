@@ -12,20 +12,12 @@ import com.vivek.entities.Roles;
 public class RolesServiceImpl implements RolesService {
 
 	@Autowired
-	RolesDAO rolesDAO;
+	private RolesDAO rolesDAO;
 
 	@Override
 	public List<Roles> getAllRoles() {
 
 		return rolesDAO.getAllRoles();
-	}
-
-	public RolesDAO getRolesDAO() {
-		return rolesDAO;
-	}
-
-	public void setRolesDAO(RolesDAO rolesDAO) {
-		this.rolesDAO = rolesDAO;
 	}
 
 	@Override
@@ -34,21 +26,19 @@ public class RolesServiceImpl implements RolesService {
 	}
 
 	@Override
-	public void updateRole(Roles Role) {
-		// TODO Auto-generated method stub
+	public void updateRole(Roles role) {
+		rolesDAO.updateRole(role);
 
 	}
 
 	@Override
-	public void deleteRoles(int RoleId) {
-		// TODO Auto-generated method stub
-
+	public Roles getRolesById(int roleId) {
+		return rolesDAO.getRolesById(roleId);
 	}
 
 	@Override
-	public Roles getRolesById(int RoleId) {
-		// TODO Auto-generated method stub
-		return null;
+	public void deleteRoles(Roles role) {
+		rolesDAO.deleteRoles(role);
 	}
 
 }

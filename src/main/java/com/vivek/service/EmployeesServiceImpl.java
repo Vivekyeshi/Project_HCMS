@@ -8,20 +8,10 @@ import org.springframework.stereotype.Service;
 import com.vivek.dao.EmployeesDAO;
 import com.vivek.entities.Employees;
 
-
 @Service
 public class EmployeesServiceImpl implements EmployeesService {
-	
 	@Autowired
 	private EmployeesDAO employeesDAO;
-
-	public EmployeesDAO getEmployeesDAO() {
-		return employeesDAO;
-	}
-
-	public void setEmployeesDAO(EmployeesDAO employeesDAO) {
-		this.employeesDAO = employeesDAO;
-	}
 
 	@Override
 	public List<Employees> getAllEmployees() {
@@ -36,22 +26,18 @@ public class EmployeesServiceImpl implements EmployeesService {
 
 	@Override
 	public void updateEmployee(Employees employee) {
-		// TODO Auto-generated method stub
-		
+		employeesDAO.updateEmployee(employee);
+
 	}
 
 	@Override
-	public void deleteEmployees(int employeeId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteEmployees(Employees employee) {
+		employeesDAO.deleteEmployees(employee);
 	}
 
 	@Override
 	public Employees getEmployeesById(int employeeId) {
-		// TODO Auto-generated method stub
-		return null;
+		return employeesDAO.getEmployeesById(employeeId);
 	}
-
-	
 
 }

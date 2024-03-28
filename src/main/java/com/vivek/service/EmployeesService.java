@@ -2,6 +2,7 @@ package com.vivek.service;
 
 import java.util.List;
 
+
 import com.vivek.entities.Employees;
 
 public interface EmployeesService {
@@ -12,7 +13,7 @@ public interface EmployeesService {
 	
 	void updateEmployee(Employees employee);
 	
-	void deleteEmployees(int employeeId);
+	void deleteEmployees(Employees employee);
 	
 	Employees getEmployeesById(int employeeId);
 

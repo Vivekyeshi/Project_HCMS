@@ -12,7 +12,7 @@ public interface DepartmentDAO {
 
 	void updateDepartment(Departments department);
 
-	void deleteDepartments(int departmentId);
+	void deleteDepartments(Departments department);
 
 	Departments getDepartmentsById(int departmentId);
 
