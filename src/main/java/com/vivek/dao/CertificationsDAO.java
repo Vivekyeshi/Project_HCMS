@@ -12,7 +12,7 @@ public interface CertificationsDAO {
 
 	void updateCertification(Certifications Certification);
 
-	void deleteCertifications(int CertificationId);
+	void deleteCertifications(Certifications certification);
 
 	Certifications getCertificationsById(int CertificationId);
 }

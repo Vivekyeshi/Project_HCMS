@@ -30,20 +30,17 @@ public class LeaveTypesDAOImpl implements LeaveTypesDAO{
 
 	@Override
 	public void updateLeaveType(LeaveTypes leaveType) {
-		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).merge(leaveType);		
 	}
 
 	@Override
-	public void deleteLeaveTypes(int leaveTypeId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteLeaveTypes(LeaveTypes leaveType) {
+		entityManager.unwrap(Session.class).remove(leaveType);		
 	}
 
 	@Override
 	public LeaveTypes getLeaveTypesById(int leaveTypeId) {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(LeaveTypes.class, leaveTypeId);
 	}
 
 }

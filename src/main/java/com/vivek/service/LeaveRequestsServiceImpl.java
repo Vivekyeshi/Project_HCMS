@@ -25,20 +25,17 @@ public class LeaveRequestsServiceImpl implements LeaveRequestsService {
 
 	@Override
 	public void updateLeaveRequest(LeaveRequests leaveRequest) {
-		// TODO Auto-generated method stub
-		
+		leaveRequestsDAO.updateLeaveRequest(leaveRequest);		
 	}
 
 	@Override
-	public void deleteLeaveRequests(int leaveRequestId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteLeaveRequests(LeaveRequests leaveRequest) {
+		leaveRequestsDAO.deleteLeaveRequests(leaveRequest);		
 	}
 
 	@Override
 	public LeaveRequests getLeaveRequestsById(int leaveRequestId) {
-		// TODO Auto-generated method stub
-		return null;
+		return leaveRequestsDAO.getLeaveRequestsById(leaveRequestId);
 	}
 
 }

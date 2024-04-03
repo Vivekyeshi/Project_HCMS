@@ -11,7 +11,7 @@ public interface PayrollService {
 
 	void updatePayroll(Payroll payroll);
 
-	void deletePayroll(int payrollId);
+	void deletePayroll(Payroll payroll);
 
 	Payroll getPayrollById(int payrollId);
 }

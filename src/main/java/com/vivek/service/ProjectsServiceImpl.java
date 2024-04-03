@@ -25,20 +25,17 @@ public class ProjectsServiceImpl implements ProjectsService{
 
 	@Override
 	public void updateProject(Projects project) {
-		// TODO Auto-generated method stub
-		
+		projectsDAO.updateProject(project);		
 	}
 
 	@Override
-	public void deleteProjects(int projectId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteProjects(Projects project) {
+		projectsDAO.deleteProjects(project);		
 	}
 
 	@Override
 	public Projects getProjectsById(int projectId) {
-		// TODO Auto-generated method stub
-		return null;
+		return projectsDAO.getProjectsById(projectId);
 	}
 
 }

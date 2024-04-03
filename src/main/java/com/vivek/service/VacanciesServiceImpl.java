@@ -26,20 +26,17 @@ public class VacanciesServiceImpl implements VacanciesService{
 
 	@Override
 	public void updateVacancie(Vacancies vacancie) {
-		// TODO Auto-generated method stub
-		
+		vacanciesDAO.updateVacancie(vacancie);		
 	}
 
 	@Override
-	public void deleteVacancies(int vacancieId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteVacancies(Vacancies vacancie) {
+		vacanciesDAO.deleteVacancies(vacancie);		
 	}
 
 	@Override
 	public Vacancies getVacanciesById(int vacancieId) {
-		// TODO Auto-generated method stub
-		return null;
+		return vacanciesDAO.getVacanciesById(vacancieId);
 	}
 
 }

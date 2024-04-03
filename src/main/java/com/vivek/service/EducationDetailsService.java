@@ -11,7 +11,7 @@ public interface EducationDetailsService {
 
 	void updateEducationDetail(EducationDetails educationDetail);
 
-	void deleteEducationDetails(int educationDetailId);
+	void deleteEducationDetails(EducationDetails educationDetail);
 
 	EducationDetails getEducationDetailsById(int educationDetailId);
 }

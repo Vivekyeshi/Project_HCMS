@@ -25,20 +25,17 @@ public class TrainersServiceImpl implements TrainersService{
 
 	@Override
 	public void updateTrainer(Trainers trainer) {
-		// TODO Auto-generated method stub
-		
+		trainersDAO.updateTrainer(trainer);		
 	}
 
 	@Override
-	public void deleteTrainers(int trainerId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteTrainers(Trainers trainer) {
+		trainersDAO.deleteTrainers(trainer);		
 	}
 
 	@Override
 	public Trainers getTrainersById(int trainerId) {
-		// TODO Auto-generated method stub
-		return null;
+		return trainersDAO.getTrainersById(trainerId);
 	}
 
 }

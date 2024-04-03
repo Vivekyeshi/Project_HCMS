@@ -11,7 +11,7 @@ public interface EmployeeManagersDAO {
 
 	void updateEmployeeManager(EmployeeManagers employeeManager);
 
-	void deleteEmployeeManagers(int employeeManagerId);
+	void deleteEmployeeManagers(EmployeeManagers employeeManager);
 
 	EmployeeManagers getEmployeeManagersById(int employeeManagerId);
 }

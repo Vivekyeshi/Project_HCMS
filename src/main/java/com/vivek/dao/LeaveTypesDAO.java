@@ -11,7 +11,7 @@ public interface LeaveTypesDAO {
 
 	void updateLeaveType(LeaveTypes leaveType);
 
-	void deleteLeaveTypes(int leaveTypeId);
+	void deleteLeaveTypes(LeaveTypes leaveType);
 
 	LeaveTypes getLeaveTypesById(int leaveTypeId);
 }

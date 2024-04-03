@@ -25,20 +25,17 @@ public class TrainingSchedulesServiceImpl implements TrainingSchedulesService {
 
 	@Override
 	public void updateTrainingSchedules(TrainingSchedules trainingSchedules) {
-		// TODO Auto-generated method stub
-		
+		trainingSchedulesDAO.updateTrainingSchedules(trainingSchedules);		
 	}
 
 	@Override
-	public void deleteTrainingSchedules(int trainingSchedulesId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteTrainingSchedules(TrainingSchedules trainingSchedules) {
+		trainingSchedulesDAO.deleteTrainingSchedules(trainingSchedules);		
 	}
 
 	@Override
 	public TrainingSchedules getTrainingSchedulesById(int trainingSchedulesId) {
-		// TODO Auto-generated method stub
-		return null;
+		return trainingSchedulesDAO.getTrainingSchedulesById(trainingSchedulesId);
 	}
 
 }

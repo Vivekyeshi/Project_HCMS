@@ -31,20 +31,17 @@ public class LeaveRequestsDAOImpl implements LeaveRequestsDAO {
 
 	@Override
 	public void updateLeaveRequest(LeaveRequests leaveRequest) {
-		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).merge(leaveRequest);		
 	}
 
 	@Override
-	public void deleteLeaveRequests(int leaveRequestId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteLeaveRequests(LeaveRequests leaveRequest) {
+		entityManager.unwrap(Session.class).remove(leaveRequest);		
 	}
 
 	@Override
 	public LeaveRequests getLeaveRequestsById(int leaveRequestId) {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(LeaveRequests.class, leaveRequestId);
 	}
 
 }

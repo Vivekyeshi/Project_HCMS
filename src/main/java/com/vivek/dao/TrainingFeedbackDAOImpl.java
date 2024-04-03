@@ -31,20 +31,17 @@ public class TrainingFeedbackDAOImpl implements TrainingFeedbackDAO{
 
 	@Override
 	public void updateTrainingFeedback(TrainingFeedback trainingFeedback) {
-		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).merge(trainingFeedback);		
 	}
 
 	@Override
-	public void deleteTrainingFeedback(int trainingFeedbackId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteTrainingFeedback(TrainingFeedback trainingFeedback) {
+		entityManager.unwrap(Session.class).remove(trainingFeedback);		
 	}
 
 	@Override
 	public TrainingFeedback getTrainingFeedbackById(int trainingFeedbackId) {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(TrainingFeedback.class, trainingFeedbackId);
 	}
 
 }

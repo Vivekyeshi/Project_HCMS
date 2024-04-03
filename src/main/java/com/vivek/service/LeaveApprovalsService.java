@@ -11,7 +11,7 @@ public interface LeaveApprovalsService {
 
 	void updateLeaveApproval(LeaveApprovals leaveApproval);
 
-	void deleteLeaveApprovals(int leaveApprovalId);
+	void deleteLeaveApprovals(LeaveApprovals leaveApproval);
 
 	LeaveApprovals getLeaveApprovalsById(int leaveApprovalId);
 }

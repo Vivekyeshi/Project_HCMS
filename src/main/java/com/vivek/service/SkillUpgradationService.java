@@ -11,7 +11,7 @@ public interface SkillUpgradationService {
 
 	void updateSkillUpgradation(SkillUpgradation skillUpgradation);
 
-	void deleteSkillUpgradation(int skillUpgradationId);
+	void deleteSkillUpgradation(SkillUpgradation skillUpgradation);
 
 	SkillUpgradation getSkillUpgradationById(int skillUpgradationId);
 }

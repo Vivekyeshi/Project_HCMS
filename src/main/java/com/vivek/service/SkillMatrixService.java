@@ -11,7 +11,7 @@ public interface SkillMatrixService {
 
 	void updateSkillMatrix(SkillMatrix skillMatrix);
 
-	void deleteSkillMatrix(int skillMatrixId);
+	void deleteSkillMatrix(SkillMatrix skillMatrix);
 
 	SkillMatrix getSkillMatrixById(int skillMatrixId);
 }

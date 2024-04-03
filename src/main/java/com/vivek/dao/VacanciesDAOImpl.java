@@ -32,20 +32,17 @@ public class VacanciesDAOImpl implements VacanciesDAO{
 
 	@Override
 	public void updateVacancie(Vacancies vacancie) {
-		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).merge(vacancie);		
 	}
 
 	@Override
-	public void deleteVacancies(int vacancieId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteVacancies(Vacancies vacancie) {
+		entityManager.unwrap(Session.class).remove(vacancie);		
 	}
 
 	@Override
 	public Vacancies getVacanciesById(int vacancieId) {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(Vacancies.class, vacancieId);
 	}
 
 }

@@ -25,20 +25,17 @@ public class SkillUpgradationServiceImpl implements SkillUpgradationService{
 
 	@Override
 	public void updateSkillUpgradation(SkillUpgradation skillUpgradation) {
-		// TODO Auto-generated method stub
-		
+		skillUpgradationDAO.updateSkillUpgradation(skillUpgradation);		
 	}
 
 	@Override
-	public void deleteSkillUpgradation(int skillUpgradationId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteSkillUpgradation(SkillUpgradation skillUpgradation) {
+		skillUpgradationDAO.deleteSkillUpgradation(skillUpgradation);		
 	}
 
 	@Override
 	public SkillUpgradation getSkillUpgradationById(int skillUpgradationId) {
-		// TODO Auto-generated method stub
-		return null;
+		return skillUpgradationDAO.getSkillUpgradationById(skillUpgradationId);
 	}
 
 }

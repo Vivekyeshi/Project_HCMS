@@ -11,7 +11,7 @@ public interface TrainingModulesService {
 
 	void updateTrainingModules(TrainingModules trainingModules);
 
-	void deleteTrainingModules(int trainingModulesId);
+	void deleteTrainingModules(TrainingModules trainingModules);
 
 	TrainingModules getTrainingModulesById(int trainingModulesId);
 }

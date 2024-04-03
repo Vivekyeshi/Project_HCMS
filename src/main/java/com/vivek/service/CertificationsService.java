@@ -12,7 +12,7 @@ public interface CertificationsService {
 
 	void updateCertification(Certifications Certification);
 
-	void deleteCertifications(int CertificationId);
+	void deleteCertifications(Certifications Certification);
 
 	Certifications getCertificationsById(int CertificationId);
 }

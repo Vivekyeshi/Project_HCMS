@@ -11,7 +11,7 @@ public interface TrainingSchedulesService {
 
 	void updateTrainingSchedules(TrainingSchedules trainingSchedules);
 
-	void deleteTrainingSchedules(int trainingSchedulesId);
+	void deleteTrainingSchedules(TrainingSchedules trainingSchedules);
 
 	TrainingSchedules getTrainingSchedulesById(int trainingSchedulesId);
 }

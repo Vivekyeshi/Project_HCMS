@@ -31,20 +31,17 @@ public class PayrollDAOImpl implements PayrollDAO {
 
 	@Override
 	public void updatePayroll(Payroll payroll) {
-		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).merge(payroll);		
 	}
 
 	@Override
-	public void deletePayroll(int payrollId) {
-		// TODO Auto-generated method stub
-		
+	public void deletePayroll(Payroll payroll) {
+		entityManager.unwrap(Session.class).remove(payroll);
 	}
 
 	@Override
 	public Payroll getPayrollById(int payrollId) {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(Payroll.class, payrollId);
 	}
 
 }

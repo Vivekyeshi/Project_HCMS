@@ -11,7 +11,7 @@ public interface VacanciesDAO {
 
 	void updateVacancie(Vacancies vacancie);
 
-	void deleteVacancies(int vacancieId);
+	void deleteVacancies(Vacancies vacancie);
 
 	Vacancies getVacanciesById(int vacancieId);
 }

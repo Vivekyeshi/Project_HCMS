@@ -19,32 +19,29 @@ public class ExternalTrainersDAOImpl implements ExternalTrainersDAO{
 	private EntityManager entityManager;
 	
 	@Override
-	public List<ExternalTrainers> getAllExtrnalTrainers() {
+	public List<ExternalTrainers> getAllExternalTrainers() {
 		return entityManager.unwrap(Session.class).createQuery("from ExternalTrainers",ExternalTrainers.class).getResultList();
 	}
 
 	@Override
-	public void addextrnalTrainers(ExternalTrainers extrnalTrainer) {
-		entityManager.unwrap(Session.class).persist(extrnalTrainer);
+	public void addExternalTrainers(ExternalTrainers externalTrainer) {
+		entityManager.unwrap(Session.class).persist(externalTrainer);
 		
 	}
 
 	@Override
-	public void updateextrnalTrainers(ExternalTrainers extrnalTrainer) {
-		// TODO Auto-generated method stub
-		
+	public void updateExternalTrainers(ExternalTrainers externalTrainer) {
+		entityManager.unwrap(Session.class).merge(externalTrainer);		
 	}
 
 	@Override
-	public void deleteExtrnalTrainers(int extrnalTrainerId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteExternalTrainers(ExternalTrainers externalTrainer) {
+		entityManager.unwrap(Session.class).remove(externalTrainer);		
 	}
 
 	@Override
-	public ExternalTrainers getExtrnalTrainersById(int extrnalTrainerId) {
-		// TODO Auto-generated method stub
-		return null;
+	public ExternalTrainers getExternalTrainersById(int externalTrainerId) {
+		return entityManager.unwrap(Session.class).get(ExternalTrainers.class, externalTrainerId);
 	}
 
 }

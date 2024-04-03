@@ -11,7 +11,7 @@ public interface TrainingFeedbackDAO {
 
 	void updateTrainingFeedback(TrainingFeedback trainingFeedback);
 
-	void deleteTrainingFeedback(int trainingFeedbackId);
+	void deleteTrainingFeedback(TrainingFeedback trainingFeedback);
 
 	TrainingFeedback getTrainingFeedbackById(int trainingFeedbackId);
 }

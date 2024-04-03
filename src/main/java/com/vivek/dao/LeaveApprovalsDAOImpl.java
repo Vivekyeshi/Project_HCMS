@@ -31,20 +31,17 @@ public class LeaveApprovalsDAOImpl implements LeaveApprovalsDAO{
 
 	@Override
 	public void updateLeaveApproval(LeaveApprovals leaveApproval) {
-		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).merge(leaveApproval);		
 	}
 
 	@Override
-	public void deleteLeaveApprovals(int leaveApprovalId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteLeaveApprovals(LeaveApprovals leaveApproval) {
+		entityManager.unwrap(Session.class).remove(leaveApproval);		
 	}
 
 	@Override
 	public LeaveApprovals getLeaveApprovalsById(int leaveApprovalId) {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(LeaveApprovals.class, leaveApprovalId);
 	}
 
 }

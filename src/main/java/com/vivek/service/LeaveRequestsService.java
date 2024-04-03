@@ -11,7 +11,7 @@ public interface LeaveRequestsService {
 
 	void updateLeaveRequest(LeaveRequests leaveRequest);
 
-	void deleteLeaveRequests(int leaveRequestId);
+	void deleteLeaveRequests(LeaveRequests leaveRequest);
 
 	LeaveRequests getLeaveRequestsById(int leaveRequestId);
 }

@@ -31,20 +31,17 @@ public class ProjectsDAOImpl implements ProjectsDAO{
 
 	@Override
 	public void updateProject(Projects project) {
-		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).merge(project);		
 	}
 
 	@Override
-	public void deleteProjects(int projectId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteProjects(Projects project) {
+		entityManager.unwrap(Session.class).remove(project);		
 	}
 
 	@Override
 	public Projects getProjectsById(int projectId) {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(Projects.class, projectId);
 	}
 
 }

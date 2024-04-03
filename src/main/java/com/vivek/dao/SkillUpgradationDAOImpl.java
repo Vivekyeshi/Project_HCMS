@@ -30,20 +30,17 @@ public class SkillUpgradationDAOImpl implements SkillUpgradationDAO {
 
 	@Override
 	public void updateSkillUpgradation(SkillUpgradation skillUpgradation) {
-		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).merge(skillUpgradation);		
 	}
 
 	@Override
-	public void deleteSkillUpgradation(int skillUpgradationId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteSkillUpgradation(SkillUpgradation skillUpgradation) {
+		entityManager.unwrap(Session.class).remove(skillUpgradation);		
 	}
 
 	@Override
 	public SkillUpgradation getSkillUpgradationById(int skillUpgradationId) {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(SkillUpgradation.class, skillUpgradationId);
 	}
 
 }

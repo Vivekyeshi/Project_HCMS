@@ -25,20 +25,17 @@ public class PayrollServiceImpl implements PayrollService {
 
 	@Override
 	public void updatePayroll(Payroll payroll) {
-		// TODO Auto-generated method stub
-		
+		payrollDAO.updatePayroll(payroll);		
 	}
 
 	@Override
-	public void deletePayroll(int payrollId) {
-		// TODO Auto-generated method stub
-		
+	public void deletePayroll(Payroll payroll) {
+		payrollDAO.deletePayroll(payroll);		
 	}
 
 	@Override
 	public Payroll getPayrollById(int payrollId) {
-		// TODO Auto-generated method stub
-		return null;
+		return payrollDAO.getPayrollById(payrollId);
 	}
 
 }

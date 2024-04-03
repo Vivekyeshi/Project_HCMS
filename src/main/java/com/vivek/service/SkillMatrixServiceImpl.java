@@ -25,20 +25,17 @@ public class SkillMatrixServiceImpl implements SkillMatrixService{
 
 	@Override
 	public void updateSkillMatrix(SkillMatrix skillMatrix) {
-		// TODO Auto-generated method stub
-		
+		skillMatrixDAO.updateSkillMatrix(skillMatrix);		
 	}
 
 	@Override
-	public void deleteSkillMatrix(int skillMatrixId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteSkillMatrix(SkillMatrix skillMatrix) {
+		skillMatrixDAO.deleteSkillMatrix(skillMatrix);		
 	}
 
 	@Override
 	public SkillMatrix getSkillMatrixById(int skillMatrixId) {
-		// TODO Auto-generated method stub
-		return null;
+		return skillMatrixDAO.getSkillMatrixById(skillMatrixId);
 	}
 
 }

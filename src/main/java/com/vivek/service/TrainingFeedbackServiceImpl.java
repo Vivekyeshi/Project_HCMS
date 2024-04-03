@@ -25,20 +25,17 @@ public class TrainingFeedbackServiceImpl implements TrainingFeedbackService{
 
 	@Override
 	public void updateTrainingFeedback(TrainingFeedback trainingFeedback) {
-		// TODO Auto-generated method stub
-		
+		trainingFeedbackDAO.updateTrainingFeedback(trainingFeedback);		
 	}
 
 	@Override
-	public void deleteTrainingFeedback(int trainingFeedbackId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteTrainingFeedback(TrainingFeedback trainingFeedback) {
+		trainingFeedbackDAO.deleteTrainingFeedback(trainingFeedback);		
 	}
 
 	@Override
 	public TrainingFeedback getTrainingFeedbackById(int trainingFeedbackId) {
-		// TODO Auto-generated method stub
-		return null;
+		return trainingFeedbackDAO.getTrainingFeedbackById(trainingFeedbackId);
 	}
 
 }

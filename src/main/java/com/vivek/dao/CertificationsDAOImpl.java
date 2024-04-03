@@ -31,20 +31,17 @@ public class CertificationsDAOImpl implements CertificationsDAO{
 
 	@Override
 	public void updateCertification(Certifications certification) {
-		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).merge(certification);		
 	}
 
 	@Override
-	public void deleteCertifications(int certificationId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteCertifications( Certifications certification) {
+		entityManager.unwrap(Session.class).remove(certification);
 	}
 
 	@Override
 	public Certifications getCertificationsById(int certificationId) {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(Certifications.class, certificationId);
 	}
 
 }

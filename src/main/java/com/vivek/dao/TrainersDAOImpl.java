@@ -31,20 +31,17 @@ public class TrainersDAOImpl implements TrainersDAO{
 
 	@Override
 	public void updateTrainer(Trainers trainer) {
-		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).merge(trainer);		
 	}
 
 	@Override
-	public void deleteTrainers(int trainerId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteTrainers(Trainers trainer) {
+		entityManager.unwrap(Session.class).remove(trainer);		
 	}
 
 	@Override
 	public Trainers getTrainersById(int trainerId) {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(Trainers.class, trainerId);
 	}
 
 }

@@ -31,20 +31,17 @@ public class SkillMatrixDAOImpl implements SkillMatrixDAO{
 
 	@Override
 	public void updateSkillMatrix(SkillMatrix skillMatrix) {
-		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).merge(skillMatrix);		
 	}
 
 	@Override
-	public void deleteSkillMatrix(int skillMatrixId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteSkillMatrix(SkillMatrix skillMatrix) {
+		entityManager.unwrap(Session.class).remove(skillMatrix);
 	}
 
 	@Override
 	public SkillMatrix getSkillMatrixById(int skillMatrixId) {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(SkillMatrix.class, skillMatrixId);
 	}
 
 }

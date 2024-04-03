@@ -31,20 +31,17 @@ public class UsersDAOImpl implements UsersDAO {
 
 	@Override
 	public void updateUser(Users user) {
-		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).merge(user);		
 	}
 
 	@Override
-	public void deleteUsers(int userId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteUsers(Users user) {
+		entityManager.unwrap(Session.class).remove(user);		
 	}
 
 	@Override
 	public Users getUsersById(int userId) {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(Users.class, userId);
 	}
 
 }

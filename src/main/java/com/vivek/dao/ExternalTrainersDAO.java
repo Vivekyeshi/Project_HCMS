@@ -6,13 +6,13 @@ import com.vivek.entities.ExternalTrainers;
 
 public interface ExternalTrainersDAO {
 
-	List<ExternalTrainers> getAllExtrnalTrainers();
+	List<ExternalTrainers> getAllExternalTrainers();
 
-	void addextrnalTrainers(ExternalTrainers extrnalTrainer);
+	void addExternalTrainers(ExternalTrainers externalTrainer);
 
-	void updateextrnalTrainers(ExternalTrainers extrnalTrainer);
+	void updateExternalTrainers(ExternalTrainers externalTrainer);
 
-	void deleteExtrnalTrainers(int extrnalTrainerId);
+	void deleteExternalTrainers(ExternalTrainers externalTrainer);
 
-	ExternalTrainers getExtrnalTrainersById(int extrnalTrainerId);
+	ExternalTrainers getExternalTrainersById(int externalTrainerId);
 }

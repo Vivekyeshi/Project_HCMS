@@ -26,20 +26,17 @@ public class TrainingModulesServiceImpl implements TrainingModulesService {
 
 	@Override
 	public void updateTrainingModules(TrainingModules trainingModules) {
-		// TODO Auto-generated method stub
-		
+		trainingModulesDAO.updateTrainingModules(trainingModules);		
 	}
 
 	@Override
-	public void deleteTrainingModules(int trainingModulesId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteTrainingModules(TrainingModules trainingModules) {
+		trainingModulesDAO.deleteTrainingModules(trainingModules);		
 	}
 
 	@Override
 	public TrainingModules getTrainingModulesById(int trainingModulesId) {
-		// TODO Auto-generated method stub
-		return null;
+		return trainingModulesDAO.getTrainingModulesById(trainingModulesId);
 	}
 
 }
